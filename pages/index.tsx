@@ -22,9 +22,11 @@ export default function Home({
     date: string
     title: string
     id: string
-    imgFilename: string
+    imgFilename: string,
+    imgSrc: string,
   }[]
 }) {
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -54,13 +56,14 @@ export default function Home({
         </div>
       </div>
 
-      <div className="border-bottom">
-        {allGalleryItemsData.map(({id, date, title, imgFilename})=>(
-          <div key={id}>
+      <div className="gap-8 columns-3">
+        {allGalleryItemsData.map(({id, date, title, imgFilename, imgSrc})=>(
+          <div key={id} className="border-solid border-2 border-indigo-600">
             <p>{id}</p>
             <p>{date}</p>
             <p>{title}</p>
             <p>{imgFilename}</p>
+            <img src={imgSrc}></img>
           </div>
         ))}
       </div>

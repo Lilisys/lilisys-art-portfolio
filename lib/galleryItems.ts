@@ -5,6 +5,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 
 const galleryItemsDirectory = path.join(process.cwd(), 'galleryItems')
+const galleryImagesDirectory = `${process.env.S3_PATH}/gallery-images`
 
 // gallery items are md files with img filename, title, desc, date
 // TODO: can be fetched from aws or something in the future
@@ -22,9 +23,14 @@ export function getSortedGalleryItemsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
+    // Put together img src
+    const imgFilename = matterResult.data.imgFilename
+    const imgSrc = `${galleryImagesDirectory}/${imgFilename}`
+
     // Combine the data with the id
     return {
       id,
+      imgSrc,
       ...(matterResult.data as { date: string; title: string; imgFilename: string })
     }
   })
