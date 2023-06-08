@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* NOTES
+From logo
+purple        #c594cc
+cyan          #69e7f5
+turquoise     #76dcde
+green         #afe9d0
+cream         #f0e2d7
+pink          #e6d7ee
+*/
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
