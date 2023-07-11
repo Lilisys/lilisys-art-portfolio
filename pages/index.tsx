@@ -27,7 +27,7 @@ export default function Home({
   }) {
 
   return (
-    <Layout>
+    <Layout currentPage='gallery'>
       <Gallery allGalleryItemsData={allGalleryItemsData}></Gallery>
     </Layout>
   )

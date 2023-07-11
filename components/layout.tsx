@@ -8,9 +8,21 @@ import Header from './header';
 export const siteTitle = 'Lilisys Art Portfolio';
 const inter = Inter({ subsets: ['latin'] })
 
+// const PAGES = {
+//   ABOUT: "about",
+//   HOME: "home",
+//   GALLERY: "gallery",
+//   CONVENTIONS: "conventions",
+//   COMMISSIONS: "commissions"
+// } as const;
+
+// do we need this? maybe
+type PAGES = 'about' | 'home' | 'gallery' | 'conventions' | 'commissions'
+
 type LayoutProps = {
   children: React.ReactNode,
   home?: boolean,
+  currentPage?: PAGES,
 };
 
 export default function Layout(props: LayoutProps) {

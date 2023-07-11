@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 type HeaderProps = {
     siteTitle: string,
@@ -10,10 +11,10 @@ export default function Header(props: HeaderProps) {
       <div className="flex flex-row justify-between">
         {/* left nav buttons */}
         <div className="flex- flex flex-row bg-blue-200">
-          <p className="flex-1">ABOUT</p>
-          <p className="flex-1">GALLERY</p>
-          <p className="flex-1">CONVENTIONS</p>
-          <p className="flex-1">COMMISSIONS</p>
+          <Link href={'/about'}>ABOUT</Link>
+          <Link href={'/'}>GALLERY</Link>
+          <Link href={'/conventions'}>CONVENTIONS</Link>
+          <Link href={'/commissions'}>COMMISSIONS</Link>
         </div>
         <div className="flex-2 bg-blue-200 mx-10">
           <h1>{siteTitle}</h1>

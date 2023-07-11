@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Layout from '@/components/layout';
 
-function About() {
+function Commissions() {
   return (
-    <Layout currentPage='about'>
+    <Layout currentPage='commissions'>
       <div>
-        <p>ABOUT PAGE</p>
+        <p>COMMISSION INFO</p>
       </div>
     </Layout>
   )
 }
  
-export default About
+export default Commissions

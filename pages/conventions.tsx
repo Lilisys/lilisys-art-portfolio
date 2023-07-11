@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Layout from '@/components/layout';
 
-function About() {
+function Conventions() {
   return (
-    <Layout currentPage='about'>
+    <Layout currentPage='conventions'>
       <div>
-        <p>ABOUT PAGE</p>
+        <p>UPCOMING CONVENTIONS</p>
       </div>
     </Layout>
   )
 }
  
-export default About
+export default Conventions
