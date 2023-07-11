@@ -1,34 +1,43 @@
-import { Inter } from 'next/font/google'
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import localFont from '@next/font/local'
 
 import Header from './header';
+import {PAGES} from './sharedTypes';
 
-export const siteTitle = 'Lilisys Art Portfolio';
-const inter = Inter({ subsets: ['latin'] })
-
-// const PAGES = {
-//   ABOUT: "about",
-//   HOME: "home",
-//   GALLERY: "gallery",
-//   CONVENTIONS: "conventions",
-//   COMMISSIONS: "commissions"
-// } as const;
+export const siteTitle = 'LILISYS';
+const clearSans = localFont({
+  src: [
+    {
+      path: '../public/fonts/ClearSans-Thin.ttf',
+      weight: '300'
+    },
+    {
+      path: '../public/fonts/ClearSans-Regular.ttf',
+      weight: '400'
+    },
+    {
+      path: '../public/fonts/ClearSans-Bold.ttf',
+      weight: '700'
+    }
+  ],
+  variable: '--font-clear-sans'
+})
 
 // do we need this? maybe
-type PAGES = 'about' | 'home' | 'gallery' | 'conventions' | 'commissions'
+
 
 type LayoutProps = {
   children: React.ReactNode,
   home?: boolean,
-  currentPage?: PAGES,
+  currentPage: PAGES,
 };
 
 export default function Layout(props: LayoutProps) {
-  const {children, home} = props;
+  const {children, home, currentPage} = props;
   return (
-    <div>
+    <div className={`${clearSans.className}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -45,9 +54,9 @@ export default function Layout(props: LayoutProps) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
-      <Header siteTitle={siteTitle}/>
+      <Header siteTitle={siteTitle} currentPage={currentPage}/>
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className} bg-green-200`}
+        className={'flex min-h-screen flex-col items-center justify-between p-24 bg-green-200'}
       >
         {children}
       </main>

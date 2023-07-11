@@ -1,0 +1,1 @@
+export type PAGES = 'about' | 'home' | 'gallery' | 'conventions' | 'commissions'
