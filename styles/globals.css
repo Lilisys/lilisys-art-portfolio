@@ -11,11 +11,20 @@ turquoise     #76dcde
 green         #afe9d0
 cream         #f0e2d7
 pink          #e6d7ee
+
+https://coolors.co/c594cc-1698e9-258faf-39afb9-eaba5d-fea3d3
+--wisteria: #c594ccff;
+--celestial-blue: #1698e9ff;
+--bondi-blue: #258fafff;
+--verdigris: #39afb9ff;
+--hunyadi-yellow: #eaba5dff;
+--carnation-pink: #fea3d3ff;
+
 */
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,4 +43,24 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.debug {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.debug-1 {
+  border-color: rgb(105, 231, 245);
+  background-color: rgb(223, 248, 255);
+}
+
+.debug-2 {
+  border-color: rgb(197, 148, 204);
+  background-color: rgb(230, 215, 238);
+}
+
+.debug-3 {
+  border-color: rgb(16, 167, 112);
+  background-color: rgb(175, 233, 208);
 }

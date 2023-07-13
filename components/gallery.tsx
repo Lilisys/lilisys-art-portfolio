@@ -19,7 +19,7 @@ export function GalleryItem(props : GalleryItemProps) {
   return (
     <div 
       key={id} 
-      className="border-solid border-2 border-indigo-600 bg-violet-300 object-contain rounded-lg overflow-hidden mb-8 relative cursor-pointer"
+      className="object-contain rounded-lg overflow-hidden mb-8 relative cursor-pointer"
     >
       {/* <p>{id}</p>
       <p>{date}</p>
@@ -39,7 +39,7 @@ export function GalleryItem(props : GalleryItemProps) {
 export default function Gallery({allGalleryItemsData}: {allGalleryItemsData: GalleryItem[]}) {
   
   return (
-    <div className="w-full lg:columns-3 sm:columns-2 gap-2rem bg-yellow-100">
+    <div className="w-full lg:columns-3 sm:columns-2 gap-2rem">
       {allGalleryItemsData.map((galleryItem: GalleryItem, index)=>(
         <GalleryItem key={index} galleryItem={galleryItem}/>
       ))}

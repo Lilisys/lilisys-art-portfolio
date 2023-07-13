@@ -4,8 +4,17 @@ import Layout from '@/components/layout';
 function About() {
   return (
     <Layout currentPage='about'>
-      <div>
-        <p>ABOUT PAGE</p>
+      <div
+        className='flex'
+      >
+        <div className='flex-1'>
+
+        </div>
+        <div className='flex-1'>
+
+        </div>
+        <h2>About</h2>
+
       </div>
     </Layout>
   )

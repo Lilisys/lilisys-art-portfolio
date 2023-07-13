@@ -14,7 +14,13 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-clear-sans)']
-      }
+      },
+      colors: {
+        'theme-cyan': '#69e7f5',
+        'theme-purple': '#c594cc',
+        'bondi-blue': '#258faf',
+        'celestial-blue': '#1698e9',
+      },
     },
   },
   plugins: [],

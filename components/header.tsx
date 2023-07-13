@@ -17,21 +17,21 @@ export default function Header(props: HeaderProps) {
     return '';
   }
   return (
-    <nav className="sticky top-0 bg-pink-200 z-50 h-32">
-      <div className="flex flex-row justify-between items-center border-solid border-2 border-pink-600 p-3">
+    <nav className="sticky top-0 z-50 h-32 text-celestial-blue bg-white">
+      <div className="flex flex-row justify-between items-center p-3">
         {/* left nav buttons */}
-        <div className="basis-1/4 flex justify-between flex-row bg-blue-200 border-solid border-2 border-indigo-600">
+        <div className="basis-1/4 flex justify-between flex-row">
           <Link className={navlinkClass(currentPage, 'about')} href={'/about'}>ABOUT</Link>
           <Link className={navlinkClass(currentPage, 'gallery')} href={'/'}>GALLERY</Link>
           <Link className={navlinkClass(currentPage, 'conventions')} href={'/conventions'}>CONVENTIONS</Link>
           <Link className={navlinkClass(currentPage, 'commissions')} href={'/commissions'}>COMMISSIONS</Link>
         </div>
         {/* Title */}
-        <div className="basis-2/4 bg-blue-200 mx-10 border-solid border-2 border-indigo-600 text-8xl" >
+        <div className="basis-2/4 mx-10 text-8xl">
           <h1 className="text-center">{siteTitle}</h1>
         </div>
         {/* right nav buttons */}
-        <div className="basis-1/4 flex flex-row bg-blue-200 border-solid border-2 border-indigo-600">
+        <div className="basis-1/4 flex flex-row">
           <p className="flex-1">IG</p>
           <p className="flex-1">TWT</p>
           <p className="flex-1">YT</p>
