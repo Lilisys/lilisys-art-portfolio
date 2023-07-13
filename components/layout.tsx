@@ -57,7 +57,7 @@ export default function Layout(props: LayoutProps) {
       </Head>
       <Header siteTitle={siteTitle} currentPage={currentPage}/>
       <main
-        className={'flex min-h-screen flex-col items-center justify-between p-24 text-bondi-blue'}
+        className={'flex min-h-screen flex-col items-center justify-between text-bondi-blue'}
       >
         {children}
       </main>

@@ -45,6 +45,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.about-bio-stripe {
+  background: linear-gradient(to bottom, white,
+  white 25%,
+  rgb(254, 163, 211, .5) 25%,
+  rgb(254, 163, 211, .5) 80%,
+  white 80%,
+  white
+  );
+}
+
 .debug {
   border-style: solid;
   border-width: 2px;

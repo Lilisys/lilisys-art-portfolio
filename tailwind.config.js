@@ -17,9 +17,12 @@ module.exports = {
       },
       colors: {
         'theme-cyan': '#69e7f5',
-        'theme-purple': '#c594cc',
+        'wisteria': '#c594cc',
         'bondi-blue': '#258faf',
         'celestial-blue': '#1698e9',
+        'verdigris': '#39afb9',
+        'hunyadi-yellow': '#eaba5d',
+        'carnation-pink': '#fea3d3',
       },
     },
   },

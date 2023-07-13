@@ -3,7 +3,7 @@ type FooterProps = {};
 export default function Footer(props: FooterProps) {
   return (
     <footer>
-      <div className="mb-32 flex text-center lg:mb-0 lg:grid-cols-4 lg:text-left bg-theme-purple">
+      <div className="mb-32 flex text-center lg:mb-0 lg:grid-cols-4 lg:text-left bg-wisteria">
         <div
           className="flex-1  px-5 py-4"
         >

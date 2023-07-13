@@ -28,7 +28,8 @@ export default function Header(props: HeaderProps) {
         </div>
         {/* Title */}
         <div className="basis-2/4 mx-10 text-8xl">
-          <h1 className="text-center">{siteTitle}</h1>
+          {/* todo: make the logo into an image */}
+          <h2 className="text-center">{siteTitle}</h2>
         </div>
         {/* right nav buttons */}
         <div className="basis-1/4 flex flex-row">
