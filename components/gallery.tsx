@@ -39,7 +39,7 @@ export function GalleryItem(props : GalleryItemProps) {
 export default function Gallery({allGalleryItemsData}: {allGalleryItemsData: GalleryItem[]}) {
   
   return (
-    <div className="w-full lg:columns-3 sm:columns-2 gap-2rem">
+    <div className="w-full lg:columns-3 sm:columns-2 gap-2rem p-24">
       {allGalleryItemsData.map((galleryItem: GalleryItem, index)=>(
         <GalleryItem key={index} galleryItem={galleryItem}/>
       ))}

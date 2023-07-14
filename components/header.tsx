@@ -12,7 +12,7 @@ export default function Header(props: HeaderProps) {
 
   const navlinkClass = (currentPage: PAGES, compare: PAGES) => {
     if (currentPage === compare) {
-      return 'underline';
+      return 'underline underline-offset-4';
     }
     return '';
   }
