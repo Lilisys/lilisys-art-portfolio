@@ -7,24 +7,56 @@ type HeaderProps = {
     currentPage: PAGES,
   };
 
+type NavLink = {
+  id: PAGES,
+  title: string,
+  url: string,
+}
+
 export default function Header(props: HeaderProps) {
   const {siteTitle, currentPage} = props;
 
+  const navLinks: NavLink[] = [
+    {
+      id: 'about',
+      title: 'ABOUT',
+      url: '/about',
+    },
+    {
+      id: 'gallery',
+      title: 'GALLERY',
+      url: '/',
+    },
+    {
+      id: 'conventions',
+      title: 'CONVENTIONS',
+      url: '/conventions',
+    },
+    {
+      id: 'commissions',
+      title: 'COMMISSIONS',
+      url: '/commissions',
+    },
+  ]
   const navlinkClass = (currentPage: PAGES, compare: PAGES) => {
+    const sharedStyle = 'ml-3 '
     if (currentPage === compare) {
-      return 'underline underline-offset-4';
+      return sharedStyle + 'underline underline-offset-4 ml-3';
     }
-    return '';
+    return sharedStyle;
   }
   return (
     <nav className="sticky top-0 z-50 h-32 text-celestial-blue bg-white">
       <div className="flex flex-row justify-between items-center p-3">
         {/* left nav buttons */}
-        <div className="basis-1/4 flex justify-between flex-row">
-          <Link className={navlinkClass(currentPage, 'about')} href={'/about'}>ABOUT</Link>
-          <Link className={navlinkClass(currentPage, 'gallery')} href={'/'}>GALLERY</Link>
-          <Link className={navlinkClass(currentPage, 'conventions')} href={'/conventions'}>CONVENTIONS</Link>
-          <Link className={navlinkClass(currentPage, 'commissions')} href={'/commissions'}>COMMISSIONS</Link>
+        <div className="basis-1/4 flex justify-between flex-row grow">
+          {navLinks.map((navLinkItem: NavLink, index)=> (
+            <Link 
+              key={index} 
+              className={navlinkClass(currentPage, navLinkItem.id)} 
+              href={navLinkItem.url}>{navLinkItem.title}
+            </Link>  
+          ))}
         </div>
         {/* Title */}
         <div className="basis-2/4 mx-10 text-8xl">
